@@ -1,6 +1,6 @@
 public class Person {
 
-    private String name;
+    private final String name;
     private double balance = 0;
 
     public Person(String name) {
@@ -15,7 +15,7 @@ public class Person {
         return balance;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public void changeBalance(double change) {
+        this.balance += change;
     }
 }
