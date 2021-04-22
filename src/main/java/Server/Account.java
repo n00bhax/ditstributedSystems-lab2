@@ -1,21 +1,19 @@
-public class Person {
+package Server;
+
+public class Account {
 
     private final String name;
     private double balance = 0;
 
-    public Person(String name) {
+    public Account(String name) {
         this.name = name;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public double getBalance() {
         return balance;
     }
 
-    public void changeBalance(double change) {
+    public synchronized void changeBalance(double change) {
         this.balance += change;
     }
 }
